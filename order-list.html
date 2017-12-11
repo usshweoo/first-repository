@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ndsp</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/order-list.css">
+	
+</head>
+<body>
+	<header class="header">	
+			<!-- <div class="left-header">	
+				<a href="#"><h1 class="header-text">ndsp</h1></a>
+			</div> -->
+			<div class="right-header">
+				<div class="inside-right">	
+					<li>
+						<a href="#"><span class="badge">4</span><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
+					</li>
+					<li>	
+						<!-- Dropdown Trigger -->
+					  <a class='dropdown-button admin-dropdown' href='#' data-activates='dropdown2'>admin <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></a>
+					</li>
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown2' class='dropdown-content'>
+					    <li><a href="#!">one</a></li>
+					    <li><a href="#!">two</a></li>
+					  </ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="main">	
+			<!-- SIDEBAR  -->
+			<div class="sidebar">
+				<div class="testing">	
+						<div class="side-header">
+								<button id="close-btn" ><i class="fa fa-bars fa-lg material-icons" aria-hidden="true"></i></button>	
+							<h1>Ndsp</h1>
+						</div>	
+				<li class="selected"><a href="#" ><i class="fa fa-book " aria-hidden="true"></i> Books</a></li>
+				<li><a href="#" ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ebooks</a></li>
+				<li><a href="#" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Orders</a></li>
+				</div>
+				
+			</div><!-- sidebar end -->
+
+			<!-- Content -->
+			<div class="content">
+				<h3>Order List</h3>
+	
+				<div class="content-down">	
+				        <div class="card-content">
+				        	<div class="content-up">
+								<div class="content-up-left">	
+									<button class="waves-effect waves-light btn"><i class="fa fa-plus material-icons left" aria-hidden="true"></i>Add New Order</button>
+								</div>
+
+								<div class="content-up-right">	
+									<div class="radio-group-1">	
+										<!-- Pending radio -->
+										<p>
+									      <input class="with-gap" name="group1" type="radio" id="pending"  />
+									      <label for="pending">Pending</label>
+									    </p>
+									    <!-- confirm radio button -->
+									    <p>
+									      <input class="with-gap" checked name="group1" type="radio" id="confirm"  />
+									      <label for="confirm">Confirm</label>
+									    </p>
+									</div>
+									
+
+									<div class="radio-group-2">	
+										<!-- On the way radio -->
+										<p>
+									      <input class="with-gap" name="group2" type="radio" checked id="ontheway"  />
+									      <label for="ontheway">On the way</label>
+									    </p>
+									    <!-- return radio -->
+									    <p>
+									      <input class="with-gap" name="group2" type="radio" id="return"  />
+									      <label for="return">Return</label>
+									    </p>
+									</div>
+								   
+									<div class="group-3">	
+										 <!-- Dropdown Trigger -->
+										  <a class='dropdown-button filter-btn' href='#' data-activates='dropdown1'>filter by <i class="fa fa-angle-down fa-lg filter-caret" aria-hidden="true"></i></a>
+										  <!-- Dropdown Structure -->
+										  <ul id='dropdown1' class='dropdown-content'>
+										    <li><a href="#!">one</a></li>
+										    <li><a href="#!">two</a></li>
+										  </ul>
+
+									    <input type="text" placeholder="search" class="search-box">
+									</div>
+								
+								</div>
+					
+							</div> <!-- content-up end -->
+				        	
+				        	
+				         	<!-- Data Lists -->
+							<table class="highlight striped data-table">	
+								<thead>	
+									<tr>
+										<th>No.</th>
+										<th>Eamil</th>
+										<th>Phone</th>
+										<th>Address</th>
+										<th>Order Date</th>
+										<th>Order Count</th>
+										<th></th>
+									</tr>
+								</thead>
+
+								<tbody>	
+									<tr>	
+										<td>1</td>
+										<td>Book1</td>
+										<td>******</td>
+										<td>********</td>
+										<td>*******</td>
+										<td>*******</td>
+										<td>
+											<button class="btn-floating "><i class="material-icons fa fa-eye fa-lg"></i></button>
+											<button class="btn-floating"><i class="material-icons fa fa-trash-o "></i></button>
+										</td>
+									</tr>
+
+								<tr>
+									<td>2</td>
+									<td>yahoo@gmail.com</td>
+									<td>*******</td>
+									<td>Mandalay</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>3</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>4</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>5</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>6</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>
+									
+									<td>7</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>8</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>9</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-eye"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<!-- <tr>	
+									
+									<td>10</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>11</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>
+									
+									<td>12</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>13</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>14</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>15</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>16</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>
+									
+									<td>17</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>18</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>19</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr>
+
+								<tr>	
+									
+									<td>20</td>
+									<td>Book1</td>
+									<td>******</td>
+									<td>********</td>
+									<td>*******</td>
+									<td>*******</td>
+									<td>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-pencil-square-o"></i></button>
+										<button class="btn-floating waves-effect waves-light"><i class="material-icons fa fa-trash-o"></i></button>
+									</td>
+								</tr> -->
+
+
+
+								</tbody>
+							</table>
+				        </div><!-- card-content -->
+				     
+				</div><!-- content-down end -->
+
+				<!-- paginations -->
+				<div class="paginations">	
+					<p>Paginations</p>
+				</div>
+
+			</div><!-- Content end -->
+		</div> <!-- main end -->
+          
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  	<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>

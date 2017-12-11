@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ndsp</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-multiselect@2.0.0-beta.15/dist/vue-multiselect.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/new-book.css">
+	
+</head>
+<body>
+	<header class="header">	
+			<div class="right-header">
+				<div class="inside-right">	
+					<li>
+						<a href="#"><span class="badge">4</span><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
+					</li>
+					<li>	
+						<!-- Dropdown Trigger -->
+					  <a class='dropdown-button admin-dropdown' href='#' data-activates='dropdown2'>admin <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></a>
+					</li>
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown2' class='dropdown-content'>
+					    <li><a href="#!">one</a></li>
+					    <li><a href="#!">two</a></li>
+					  </ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="main">	
+			<!-- sidebar -->
+			<div class="sidebar">
+				<div class="testing">	
+					<div class="side-header">	
+						<button id="close-btn" ><i class="fa fa-bars fa-lg material-icons" aria-hidden="true"></i></button>
+						<h1>Ndsp</h1>
+					</div>	
+					<li class="selected"><a href="#" ><i class="fa fa-book " aria-hidden="true"></i> Books</a></li>
+					<li><a href="#" ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Ebooks</a></li>
+					<li><a href="#" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Orders</a></li>
+				</div>
+			</div><!-- sidebar end -->
+
+			<!-- CONTENT -->
+			<div class="content" id='app'>
+				<h3>Add New Book</h3>
+				
+				<div class="content-down">	
+				        <div class="card-content">
+				        	<div class="content-left">	
+				        		<img src="" >
+				        		<p>Cover Image</p>
+				        	</div>
+
+				        	<div class="content-right">	
+				        			
+			        			<form>
+			        				<!-- Cover Image  -->
+			        				<div class="form-line">
+			        					<div class="left">
+			        						<p>Cover Image <span class="red-star">*</span></p>
+			        					</div>
+
+			        					<div class="right">	
+			        							<div class=" my-input file-field input-field" id="img">
+									      <div class="btn">
+									        <span>File</span>
+									        <input type="file" for="input-img">
+									      </div>
+									      <div class="file-path-wrapper">
+									        <input class="full-width all-border file-path validate" type="text">
+									      </div>
+								    	</div>
+			        					</div>
+			        				</div>	
+
+			        				<!-- Title -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Title <span class="red-star">*</span></p>
+			        					</div>
+			        					<div class=" right my-input input-field">
+								          <input placeholder="Placeholder" id="first_name" type="text" class="validate full-width title-input">
+								        </div>
+			        				</div>
+
+			        				<!-- Authors -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Authors <span class="red-star">*</span></p>
+			        					</div>
+			        					<div class=" right ">
+			        						<div>	
+				        				
+											  <multiselect placeholder="Author"  v-model="internalValue"  label="name" 
+	       													track-by="name" placeholder="Type to search" :options="options"
+										       :multiple="true" 
+										       :searchable="true" 
+										       
+										       :internal-search="false" 
+										       :clear-on-select="false" 
+										       :close-on-select="true"
+										       :taggable="true"></multiselect>
+										       
+			        						</div>
+								        </div>
+			        				</div>
+
+			        				<!-- Categories -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Categories <span class="red-star">*</span></p>
+			        					</div>
+			        
+			        					<div class=" right ">
+								          <div>	
+			        							<multiselect placeholder="Categories"  v-model="catValue"  label="name" 
+	       													track-by="name" placeholder="Type to search" :options="categories"
+										       :multiple="true" 
+										       :searchable="true" 
+										       
+										       :internal-search="false" 
+										       :clear-on-select="false" 
+										       :close-on-select="true"></multiselect>
+			        						</div>
+
+								        </div>
+			        				</div>
+
+			        				<!-- Publisher -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Publisher <span class="red-star">*</span></p>
+			        					</div>
+			        					<div class=" right my-input input-field right-2">
+			        						<div class="right-divide">	
+			        							 	<multiselect placeholder="Publisher"  v-model="pubValue"  label="name" 
+	       													track-by="name" placeholder="Type to search" :options="publishers"
+										       :multiple="false" 
+										       :searchable="true" 
+										       
+										       :internal-search="false" 
+										       :clear-on-select="false" 
+										       :close-on-select="true"></multiselect>
+			        						</div>
+			        						<!-- Edition -->
+			        						<div class="right-2-right">
+				        						<multiselect placeholder="Edition"  v-model="ediValue"  label="name" 
+	       													track-by="name" placeholder="Type to search" :options="editions"
+										       :multiple="false" 
+										       :searchable="true" 
+										       
+										       :internal-search="false" 
+										       :clear-on-select="false" 
+										       :close-on-select="true"></multiselect>
+										       
+			        						</div>
+
+								        </div>
+			        				</div>
+
+			        				<!-- Genere -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Genere <span class="red-star">*</span></p>
+			        					</div>
+			        					<div class=" right my-input input-field right-2">
+			        						<div class="right-divide">	
+				        						<multiselect placeholder="Genere"  v-model="catValue"  label="name" 
+		       													track-by="name" placeholder="Type to search" :options="categories"
+											       :multiple="true" 
+											       :searchable="true" 
+											       
+											       :internal-search="false" 
+											       :clear-on-select="false" 
+											       :close-on-select="true">
+										       	
+										       </multiselect>
+			        						</div>
+			        						<!-- Price -->
+			        						<div class="right-2-right">	
+			        							<div class="input-field ">
+										          <input id="first_name" type="number" value="0" class="validate full-width price-input">
+										          <label for="first_name" class="input-price-label"><p>	Price</p></label>
+										        </div>
+			        						</div>
+								         
+								        </div>
+			        				</div>
+
+			        				<!-- if edit, hide div -->
+			        				<!-- Cost -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Cost <span class="red-star">*</span></p>
+			        					</div>
+			        					<div class=" right my-input input-field right-2">
+			        						<div class="right-divide">	
+			        							<div class="input-field ">
+										          <input id="first_name" type="number" value="0" class="validate full-width price-input" placeholder="Cost">
+										          <!-- <label for="first_name" class="input-price-label"><p>	</p></label> -->
+										        </div>
+			        							
+			        						</div>
+			        						<!-- Qty -->
+			        						<div class="right-2-right">	
+			        							<div class="input-field ">
+										          <input id="first_name" type="number" value="0" class="validate full-width price-input">
+										          <label for="first_name" class="input-price-label"><p>	Qty</p></label>
+										        </div>
+			        						</div>
+								         
+								        </div>
+			        				</div>
+
+			        				<!-- Description -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						<p>Description </p>
+			        					</div>
+			        					<div class="right ">
+								          <textarea rows="7"></textarea>
+								        </div>
+			        				</div>
+
+			        				<!-- is Consigment -->
+			        				<div class="form-line">	
+			        					<div class="left">	
+			        						
+			        					</div>
+			        					<div class="right " style="margin-top: 10px;">
+									        <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+									      	<label for="filled-in-box" style="left: 0; color : #333">is Consigment</label>
+								        </div>
+			        				</div>
+
+			        				<!-- buttons -->
+			        				<div class="form-line ">	
+			        					<div class="left">	
+			        						
+			        					</div>
+			        					<div class="right save-buttons">
+								         	<button class="waves-effect waves-light btn close-button"> Close</button>
+			        						<button class="waves-effect waves-light btn">Save Changes</button>
+								        </div>
+			        				</div>
+				        		</form>		
+				        	</div>
+				        </div><!-- card-content end -->
+				     
+				</div><!-- content-down end-->
+			</div><!-- Content end -->
+		</div>
+          
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-multiselect@2.0.0-beta.15/dist/vue-multiselect.min.js"></script>
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  
+
+  	<script type="text/javascript">
+  		var app = new Vue({
+  				components: {
+  	Multiselect: window.VueMultiselect.default
+	},
+
+  el: '#app',
+  data: {  	
+  	   isSingleLoading: false,
+         
+        internalValue: [],
+  		 catValue: [],
+  		 pubValue: [],
+  		 ediValue: [],
+	  	options: [
+	    	{id:1,'name':'Ba Ba'} ,
+	    	{id:2,'name':'Black Sheep'} ,
+	    	{id:3,'name':'White Sheep'} ,
+
+	    ],
+	    categories:[
+	    	{id:1,'name':'Funny'},
+	    	{id:1,'name':'Sciences'},
+	    	{id:1,'name':'Math'},
+	    ],
+	       publishers:[
+	    	{id:1,'name':'Two Cat'},
+	    	{id:1,'name':'Three Cat'},
+	    	{id:1,'name':'Four Cat'},
+	    ],   editions:[
+	    	{id:1,'name':'First Edition'},
+	    	{id:1,'name':'Second Edition'},
+	    	{id:1,'name':'Third Edition'},
+	    ]
+  	
+  }
+})
+  	</script>
+
+  	<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
